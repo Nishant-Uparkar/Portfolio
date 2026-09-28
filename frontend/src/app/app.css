@@ -1,0 +1,6 @@
+/* Paste this into your global src/styles.css (or import it there).
+   Home and About both read these, so a colour change happens in one place. */
+
+:root {
+    background: #d23434;
+}

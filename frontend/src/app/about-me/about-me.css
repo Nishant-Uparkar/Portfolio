@@ -1,0 +1,490 @@
+/* =========================================
+   ABOUT SECTION
+   Tokens -> layout -> components -> responsive
+========================================= */
+
+.about {
+  /* Colours (shared with the Home section) */
+  --bg: #101f42;
+  --surface: #1a2b50;
+  --surface-deep: #0b1834;
+  --surface-bar: #14264b;
+  --border: #294064;
+  --border-soft: #2b3d5e;
+  --line: #344663;
+
+  --heading: #f4f5f8;
+  --text: #b7c1d6;
+  --text-strong: #d0d5df;
+  --text-muted: #9ca8bd;
+  --text-dim: #8795ad;
+
+  --accent: #ff4058;
+  --accent-hover: #e9364e;
+  --accent-soft: rgba(255, 64, 88, 0.14);
+
+  /* Spacing scale */
+  --space-1: 8px;
+  --space-2: 12px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+
+  /* Fluid spacing */
+  --gutter: clamp(20px, 5vw, 60px);
+  --section-gap: clamp(56px, 8vw, 96px);
+
+  /* Shape and type */
+  --radius: 12px;
+  --radius-sm: 5px;
+  --font-heading: Georgia, "Times New Roman", serif;
+  --font-mono: Consolas, Menlo, monospace;
+
+  background-color: var(--bg);
+  color: var(--text);
+  padding: calc(var(--section-gap) + 8px) var(--gutter);
+}
+
+.about *,
+.about *::before,
+.about *::after {
+  box-sizing: border-box;
+}
+
+.about h2,
+.about h3,
+.about h4,
+.about p,
+.about ul,
+.about ol {
+  margin: 0;
+}
+
+.about-inner {
+  max-width: 1050px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-gap);
+}
+
+
+/* =========================================
+   SHARED PIECES
+========================================= */
+
+.section-title {
+  color: var(--heading);
+  font-family: var(--font-heading);
+  font-size: clamp(26px, 3vw, 30px);
+  line-height: 1.2;
+  margin-bottom: var(--space-1);
+}
+
+.section-sub {
+  color: var(--text-muted);
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: var(--space-5);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+
+.tags span {
+  background: var(--surface-bar);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-sm);
+  color: var(--text-strong);
+  font-size: 13px;
+  line-height: 1;
+  padding: 7px 12px;
+}
+
+/* Window title bar, used by the code card and the career log */
+.code-bar {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: var(--space-2) var(--space-3);
+  background: var(--surface-bar);
+  border-bottom: 1px solid var(--border);
+}
+
+.code-bar span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #34598f;
+}
+
+.code-bar span:first-child {
+  background: var(--accent);
+}
+
+.code-bar em {
+  margin-left: var(--space-1);
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-style: normal;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.about-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: clamp(40px, 6vw, 72px);
+  align-items: center;
+}
+
+.about-hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.about-title {
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: clamp(30px, 4.2vw, 42px);
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: var(--space-1);
+}
+
+.about-hero-text p {
+  max-width: 54ch;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.about-hero-text .lead {
+  color: var(--text-strong);
+  font-size: 18px;
+}
+
+.about-cta {
+  display: inline-block;
+  margin-top: var(--space-1);
+  padding: 14px 34px;
+  background: var(--accent);
+  border-radius: var(--radius-sm);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.about-cta:hover {
+  background: var(--accent-hover);
+  transform: translateY(-3px);
+}
+
+.about-cta:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+
+/* Code card */
+
+.code-card {
+  background: var(--surface-deep);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.35);
+  transform: rotate(1.5deg);
+}
+
+.code-card pre {
+  margin: 0;
+  padding: var(--space-4);
+  overflow-x: auto;
+  color: var(--text-strong);
+  font-family: var(--font-mono);
+  font-size: 13.5px;
+  line-height: 1.75;
+}
+
+.c-ann { color: #ffb86b; }
+.c-kw  { color: #ff6b81; }
+.c-fn  { color: #8fb4ff; }
+.c-str { color: #9fdc9f; }
+
+
+/* =========================================
+   PROOF STRIP
+========================================= */
+
+.proof {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.proof-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: var(--space-4) var(--space-5);
+}
+
+.proof-item + .proof-item {
+  border-left: 1px solid var(--border);
+}
+
+.proof-item strong {
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.proof-item span {
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   WHAT I DO
+========================================= */
+
+.do-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-4);
+}
+
+.do-card {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-5) 28px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.do-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+}
+
+.do-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  margin-bottom: var(--space-4);
+  background: var(--accent-soft);
+  border-radius: 10px;
+  color: var(--accent);
+}
+
+.do-card h4 {
+  color: var(--heading);
+  font-size: 19px;
+  line-height: 1.3;
+  margin-bottom: var(--space-2);
+}
+
+.do-card p {
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.65;
+  margin-bottom: var(--space-4);
+}
+
+/* Push tags to the bottom so cards of different heights line up */
+.do-card .tags {
+  margin-top: auto;
+}
+
+
+/* =========================================
+   PATH SO FAR (git log style)
+========================================= */
+
+.gitlog {
+  background: var(--surface-deep);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.3);
+}
+
+.commits {
+  --node: 14px;
+  --node-top: 6px;
+  --commit-gap: 40px;
+
+  list-style: none;
+  padding: var(--space-5) clamp(20px, 4vw, 36px) 36px;
+}
+
+.commit {
+  position: relative;
+  padding-left: 44px;
+}
+
+.commit + .commit {
+  margin-top: var(--commit-gap);
+}
+
+/* Node */
+.commit::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: var(--node-top);
+  width: var(--node);
+  height: var(--node);
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  background: var(--surface-deep);
+}
+
+.commit.is-head::before {
+  background: var(--accent);
+  box-shadow: 0 0 0 5px var(--accent-soft);
+}
+
+/* Rail: runs from this node to the next one, so it always lines up */
+.commit:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: calc(var(--node) / 2 - 1px);
+  top: calc(var(--node-top) + var(--node));
+  bottom: calc(-1 * (var(--commit-gap) - var(--node-top)));
+  width: 2px;
+  background: var(--line);
+}
+
+.commit-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-1) var(--space-2);
+}
+
+.commit-title {
+  color: var(--heading);
+  font-family: var(--font-heading);
+  font-size: 21px;
+  line-height: 1.3;
+}
+
+.head-badge {
+  padding: 4px 9px;
+  background: var(--accent-soft);
+  border-radius: 4px;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.commit-date {
+  margin-left: auto;
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+.commit-org {
+  color: var(--text-strong);
+  font-size: 15px;
+  line-height: 1.5;
+  margin-top: 4px;
+}
+
+.commit-desc {
+  max-width: 62ch;
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.65;
+  margin-top: var(--space-2);
+}
+
+.commit .tags {
+  margin-top: var(--space-3);
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .about-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .code-card {
+    max-width: 480px;
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  .proof {
+    grid-template-columns: 1fr;
+  }
+
+  .proof-item {
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .proof-item + .proof-item {
+    border-left: none;
+    border-top: 1px solid var(--border);
+  }
+
+  .code-card {
+    transform: none;
+  }
+
+  .commit {
+    padding-left: 36px;
+  }
+
+  .commit-date {
+    width: 100%;
+    margin-left: 0;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .about-cta,
+  .do-card {
+    transition: none;
+  }
+
+  .about-cta:hover,
+  .do-card:hover {
+    transform: none;
+  }
+
+}

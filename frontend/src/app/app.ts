@@ -2,11 +2,11 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Navbar } from './navbar/navbar';
 import { Home } from './home/home';
-
+import { AboutMe } from './about-me/about-me';
 @Component({
-  imports: [RouterOutlet, Navbar, Home],
+  imports: [RouterOutlet, Navbar, Home, AboutMe],
   selector: 'app-root',
-  styleUrl: './app.sass',
+  styleUrl: './app.css',
   templateUrl: './app.html',
 })
 export class App {
