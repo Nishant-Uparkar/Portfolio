@@ -293,16 +293,37 @@
 
   /* Social links */
 
-  .social-links {
-    width: 100%;
+ .social-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
 
-    flex-direction: row;
+.social-links a {
+  width: 60px;
+  height: 60px;
 
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    margin-bottom: 40px;
-  }
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
 
+  font-size: 50px;
+  text-decoration: none;
+
+  box-sizing: border-box;
+
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ff4058;
+  border-color: #ff4058;
+  transform: translateY(-5px);
+}
 
   /* Content */
 
