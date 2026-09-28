@@ -1,0 +1,400 @@
+/* =========================
+   HOME / HERO SECTION
+========================= */
+
+.home {
+  min-height: calc(100vh - 100px);
+
+  display: flex;
+  align-items: center;
+
+  position: relative;
+  background-color: #152e58;
+  padding: 40px 60px;
+
+  overflow: hidden;
+}
+
+
+/* =========================
+   SOCIAL LINKS
+========================= */
+
+.social-links {
+  width: 80px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 18px;
+
+  z-index: 2;
+}
+
+.social-links a {
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ff4058;
+
+  transform: translateY(-3px);
+}
+
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero-content {
+  width: 45%;
+
+  padding-left: 80px;
+
+  z-index: 2;
+}
+
+
+/* Hi There */
+
+.greeting {
+  color: #d0d5df;
+
+  font-size: 18px;
+
+  font-weight: 600;
+
+  margin-bottom: 18px;
+}
+
+
+/* Main Heading */
+
+.hero-content h1 {
+  color: white;
+
+  font-size: 48px;
+
+  line-height: 1.2;
+
+  font-weight: 700;
+
+  margin: 0 0 15px;
+}
+
+
+/* Name */
+
+.hero-content h1 span {
+  color: #ff4058;
+}
+
+
+/* Job Title */
+
+.hero-content h2 {
+  color: white;
+
+  font-size: 30px;
+
+  line-height: 1.3;
+
+  font-weight: 400;
+
+  margin: 0 0 40px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-buttons {
+  display: flex;
+
+  align-items: center;
+
+  gap: 28px;
+}
+
+.btn {
+  display: inline-block;
+
+  padding: 15px 45px;
+
+  border-radius: 5px;
+
+  text-decoration: none;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+
+/* Resume Button */
+
+.resume-btn {
+  background-color: #ff4058;
+
+  color: white;
+
+  border: 1px solid #ff4058;
+}
+
+.resume-btn:hover {
+  background-color: #e9364e;
+
+  border-color: #e9364e;
+
+  transform: translateY(-3px);
+}
+
+
+/* Contact Button */
+
+.contact-btn {
+  background-color: #294a7b;
+
+  color: white;
+
+  border: 1px solid #34598f;
+}
+
+.contact-btn:hover {
+  background-color: #34598f;
+
+  transform: translateY(-3px);
+}
+
+
+/* =========================
+   HERO IMAGE AREA
+========================= */
+
+.hero-image {
+  width: 55%;
+
+  height: 450px;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  z-index: 1;
+}
+
+
+/* Purple Background Shape */
+
+.image-background {
+  position: absolute;
+
+  width: 80%;
+  height: 70%;
+
+  background-color: #617ecf;
+
+  border-radius: 35% 45% 35% 45%;
+
+  transform: rotate(3deg);
+
+  opacity: 0.8;
+
+  z-index: -1;
+}
+
+
+/* Developer Image */
+
+.hero-image img {
+  position: relative;
+
+  width: 65%;
+
+  max-width: 420px;
+
+  height: auto;
+
+  object-fit: contain;
+
+  z-index: 2;
+
+  transition: transform 0.4s ease;
+}
+
+.hero-image img:hover {
+  transform: translateY(-8px);
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+
+/* Tablets */
+
+@media (max-width: 1000px) {
+
+  .home {
+    padding: 40px 30px;
+  }
+
+  .hero-content {
+    padding-left: 30px;
+  }
+
+  .hero-content h1 {
+    font-size: 40px;
+  }
+
+  .hero-content h2 {
+    font-size: 25px;
+  }
+
+  .hero-image {
+    height: 400px;
+  }
+
+  .hero-image img {
+    width: 75%;
+  }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+  .home {
+    min-height: auto;
+
+    flex-direction: column;
+
+    padding: 60px 25px;
+  }
+
+
+  /* Social links */
+
+  .social-links {
+    width: 100%;
+
+    flex-direction: row;
+
+    justify-content: center;
+
+    margin-bottom: 40px;
+  }
+
+
+  /* Content */
+
+  .hero-content {
+    width: 100%;
+
+    padding-left: 0;
+
+    text-align: center;
+  }
+
+  .greeting {
+    font-size: 16px;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-content h2 {
+    font-size: 24px;
+
+    margin-bottom: 30px;
+  }
+
+
+  /* Buttons */
+
+  .hero-buttons {
+    justify-content: center;
+
+    gap: 15px;
+  }
+
+  .btn {
+    padding: 13px 28px;
+
+    font-size: 14px;
+  }
+
+
+  /* Image */
+
+  .hero-image {
+    width: 100%;
+
+    height: 350px;
+
+    margin-top: 30px;
+  }
+
+  .hero-image img {
+    width: 75%;
+  }
+
+}
+
+
+/* Small Mobile */
+
+@media (max-width: 480px) {
+
+  .home {
+    padding: 40px 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 30px;
+  }
+
+  .hero-content h2 {
+    font-size: 21px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .btn {
+    width: 180px;
+
+    text-align: center;
+  }
+
+  .hero-image {
+    height: 300px;
+  }
+
+  .hero-image img {
+    width: 85%;
+  }
+
+}
