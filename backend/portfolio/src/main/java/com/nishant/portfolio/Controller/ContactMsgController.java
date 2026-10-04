@@ -14,7 +14,10 @@ import lombok.RequiredArgsConstructor;
 
 @RestController 
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = {
+    "http://localhost:4200",
+    "https://portfolio-phi-inky-qkd8n3wdu1.vercel.app"
+})
 public class ContactMsgController {
 
     private final ContactMsgService contactMsgService;
