@@ -112,7 +112,7 @@ export class ContactMe {
 
 
   this.http.post(
-    'http://localhost:8080/contact/submit',
+    'https://portfolio-py6i.onrender.com/contact/submit',
     this.contactMsg,
     {
       responseType: 'text'
