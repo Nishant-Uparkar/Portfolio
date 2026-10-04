@@ -2,64 +2,88 @@
 
   <div class="about-inner">
 
-    <!-- ================= INTRO ================= -->
+    <!-- ================= HERO ================= -->
     <div class="about-hero">
 
       <div class="about-hero-text">
+
+        <p class="about-label">ABOUT ME</p>
+
         <h2 class="about-title">
-          I turn messy business rules into backends people can trust.
+          I'm a <span>Full Stack Developer</span> building reliable
+          web applications.
         </h2>
 
-        <p class="lead">
-          I'm Nishant, a software engineer in Mumbai. I build enterprise
-          apps with Java, Spring Boot and Angular, and most of my time goes
-          into the parts users never see: APIs, database queries and data
-          validation.
+        <p class="about-lead">
+          I'm Nishant, a Software Engineer based in Mumbai. I specialize
+          in Java, Spring Boot and Angular, building full-stack applications
+          with clean APIs, reliable databases and intuitive user interfaces.
         </p>
 
-        <p>
-          I care about systems that stay correct under pressure and stay
-          readable a year after they ship.
+        <p class="about-description">
+          I enjoy solving business problems through code and building systems
+          that are easy to maintain, test and scale.
         </p>
 
-        <a href="#contact" class="about-cta">Let's work together</a>
+        <a href="#contact" class="about-cta">
+          Let's work together
+        </a>
+
       </div>
 
 
-      <!-- Illustrative code card -->
-      <div class="code-card" aria-hidden="true">
-        <div class="code-bar">
-          <span></span><span></span><span></span>
-          <em>OrderController.java</em>
-        </div>
-<pre><code><span class="c-ann">&#64;GetMapping</span>(<span class="c-str">"/orders/&#123;id&#125;"</span>)
-<span class="c-kw">public</span> OrderDto <span class="c-fn">getOrder</span>(
-    <span class="c-ann">&#64;PathVariable</span> Long id) &#123;
+      <!-- Code Card -->
+<!-- Code Card -->
+<div class="code-card">
 
-  <span class="c-fn">validate</span>(id);
-  <span class="c-kw">return</span> service.<span class="c-fn">findById</span>(id);
+  <div class="code-bar">
+    <div class="window-dots">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <em>Developer.java</em>
+  </div>
+
+  <pre><code><span class="c-kw">public class</span> <span class="c-fn">Developer</span> &#123;
+
+  <span class="c-kw">String</span> role = <span class="c-str">"Full Stack Developer"</span>;
+
+  <span class="c-kw">String</span>[] skills = &#123;
+    <span class="c-str">"Java"</span>,
+    <span class="c-str">"Spring Boot"</span>,
+    <span class="c-str">"Angular"</span>,
+    <span class="c-str">"SQL"</span>
+  &#125;;
+
+  <span class="c-kw">void</span> <span class="c-fn">build</span>() &#123;
+    solveProblems();
+    writeCleanCode();
+  &#125;
 &#125;</code></pre>
-      </div>
+
+</div>
 
     </div>
 
 
-    <!-- ================= PROOF ================= -->
+    <!-- ================= QUICK FACTS ================= -->
     <div class="proof">
 
       <div class="proof-item">
         <strong>Java SE 11</strong>
-        <span>Oracle certified Professional</span>
+        <span>Oracle Certified Professional</span>
       </div>
 
       <div class="proof-item">
-        <strong>8.66 CGPA</strong>
-        <span>BE in Computer Engineering</span>
+        <strong>8.66</strong>
+        <span>Computer Engineering CGPA</span>
       </div>
 
       <div class="proof-item">
-        <strong>Mumbai</strong>
-        <span>Where I'm based</span>
+        <strong>1.8+ Years</strong>
+        <span>Software Engineering Experience</span>
       </div>
 
     </div>
@@ -68,138 +92,282 @@
     <!-- ================= WHAT I DO ================= -->
     <div class="about-section">
 
-      <h3 class="section-title">What I do</h3>
-      <p class="section-sub">
-        Three areas where I spend most of my working day.
-      </p>
+      <div class="section-heading">
+
+        <p class="section-label">EXPERTISE</p>
+
+        <h3 class="section-title">
+          What I do
+        </h3>
+
+        <p class="section-sub">
+          I work across the stack to build reliable and maintainable
+          applications.
+        </p>
+
+      </div>
+
 
       <div class="do-grid">
 
+        <!-- Backend -->
         <article class="do-card">
-          <div class="do-icon">
-            <svg viewBox="0 0 24 24" width="24" height="24" fill="none"
-                 stroke="currentColor" stroke-width="1.8"
-                 stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="4" width="18" height="6" rx="1.5"/>
-              <rect x="3" y="14" width="18" height="6" rx="1.5"/>
-              <path d="M7 7h.01M7 17h.01"/>
-            </svg>
+
+          <div class="do-card-top">
+
+            <div class="do-icon">
+              <svg
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <rect x="3" y="4" width="18" height="6" rx="1.5"></rect>
+                <rect x="3" y="14" width="18" height="6" rx="1.5"></rect>
+                <path d="M7 7h.01"></path>
+                <path d="M7 17h.01"></path>
+              </svg>
+            </div>
+
+            <span class="card-number">01</span>
+
           </div>
-          <h4>Backend and APIs</h4>
+
+          <h4>Backend &amp; APIs</h4>
+
           <p>
-            I design and test REST APIs in Spring Boot, and build
-            real-time data streams with Kafka.
+            I build REST APIs and backend services using Java and
+            Spring Boot with a focus on clean architecture and
+            reliable business logic.
           </p>
+
           <div class="tags">
             <span>Java</span>
             <span>Spring Boot</span>
-            <span>Kafka</span>
+            <span>REST</span>
             <span>Postman</span>
           </div>
+
         </article>
 
+
+        <!-- Frontend -->
         <article class="do-card">
-          <div class="do-icon">
-            <svg viewBox="0 0 24 24" width="24" height="24" fill="none"
-                 stroke="currentColor" stroke-width="1.8"
-                 stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="4" width="18" height="16" rx="2"/>
-              <path d="M3 9h18M8 14h8"/>
-            </svg>
+
+          <div class="do-card-top">
+
+            <div class="do-icon">
+              <svg
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+                <path d="M3 9h18"></path>
+                <path d="M8 14h8"></path>
+              </svg>
+            </div>
+
+            <span class="card-number">02</span>
+
           </div>
+
           <h4>Frontend</h4>
+
           <p>
-            I build the Angular screens that sit on top of those APIs,
-            so the full stack feels like one product.
+            I create responsive Angular interfaces and connect them
+            with backend APIs to deliver a complete full-stack
+            experience.
           </p>
+
           <div class="tags">
             <span>Angular</span>
             <span>TypeScript</span>
-            <span>Swagger</span>
+            <span>HTML/CSS</span>
           </div>
+
         </article>
 
+
+        <!-- Database -->
         <article class="do-card">
-          <div class="do-icon">
-            <svg viewBox="0 0 24 24" width="24" height="24" fill="none"
-                 stroke="currentColor" stroke-width="1.8"
-                 stroke-linecap="round" stroke-linejoin="round">
-              <ellipse cx="12" cy="6" rx="8" ry="3"/>
-              <path d="M4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/>
-              <path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/>
-            </svg>
+
+          <div class="do-card-top">
+
+            <div class="do-icon">
+              <svg
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <ellipse cx="12" cy="6" rx="8" ry="3"></ellipse>
+                <path d="M4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6"></path>
+                <path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"></path>
+              </svg>
+            </div>
+
+            <span class="card-number">03</span>
+
           </div>
-          <h4>Data and quality</h4>
+
+          <h4>Database &amp; Quality</h4>
+
           <p>
-            I write lean SQL, tune slow queries and add validation so
-            bad data is caught early.
+            I work with relational databases, write efficient SQL
+            queries and add validation to keep application data
+            accurate and reliable.
           </p>
+
           <div class="tags">
-            <span>SQL</span>
             <span>MySQL</span>
             <span>PostgreSQL</span>
+            <span>SQL</span>
             <span>Git</span>
           </div>
+
         </article>
 
       </div>
+
     </div>
 
 
-    <!-- ================= JOURNEY ================= -->
+    <!-- ================= EXPERIENCE ================= -->
     <div class="about-section">
 
-      <h3 class="section-title">The path so far</h3>
+      <div class="section-heading">
+
+        <p class="section-label">EXPERIENCE</p>
+
+        <h3 class="section-title">
+          The path so far
+        </h3>
+
+        <p class="section-sub">
+          A quick look at my professional and academic journey.
+        </p>
+
+      </div>
+
 
       <div class="gitlog">
 
-        <div class="code-bar" aria-hidden="true">
-          <span></span><span></span><span></span>
+        <div class="code-bar">
+
+          <div class="window-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
           <em>career.log</em>
+
         </div>
 
-        <ol class="commits">
 
-          <li class="commit is-head">
-            <div class="commit-top">
-              <h4 class="commit-title">Software Engineer</h4>
-              <span class="head-badge">HEAD</span>
-              <span class="commit-date">Dec 2024 - now</span>
-            </div>
-            <p class="commit-org">LTIMindtree, Mumbai</p>
-            <p class="commit-desc">
-              Building Java full stack apps with Spring Boot and Angular
-              on MySQL and PostgreSQL, across enterprise projects in
-              multiple domains.
-            </p>
-            <div class="tags">
-              <span>Spring Boot</span>
-              <span>Angular</span>
-              <span>MySQL</span>
-              <span>PostgreSQL</span>
-            </div>
-          </li>
+        <div class="timeline">
 
-          <li class="commit">
-            <div class="commit-top">
-              <h4 class="commit-title">BE, Computer Engineering</h4>
-              <span class="commit-date">Jun 2020 - Jun 2024</span>
-            </div>
-            <p class="commit-org">Savitribai Phule Pune University</p>
-            <p class="commit-desc">
-              Graduated with an 8.66 CGPA and built an AI attendance
-              system using Python and OpenCV.
-            </p>
-            <div class="tags">
-              <span>Python</span>
-              <span>OpenCV</span>
-              <span>Algorithms</span>
-            </div>
-          </li>
+          <!-- Software Engineer -->
+          <div class="timeline-item current">
 
-        </ol>
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+
+              <div class="timeline-header">
+
+                <div>
+                  <h4>Software Engineer</h4>
+
+                  <p class="timeline-company">
+                    LTIMindtree · Mumbai
+                  </p>
+                </div>
+
+                <div class="timeline-date">
+                  Dec 2024 — Present
+                </div>
+
+              </div>
+
+              <p class="timeline-description">
+                Building full-stack enterprise applications using
+                Java, Spring Boot and Angular, with MySQL and
+                PostgreSQL for data management.
+              </p>
+
+              <div class="tags">
+                <span>Java</span>
+                <span>Spring Boot</span>
+                <span>Angular</span>
+                <span>MySQL</span>
+                <span>PostgreSQL</span>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- Education -->
+          <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+
+              <div class="timeline-header">
+
+                <div>
+                  <h4>BE — Computer Engineering</h4>
+
+                  <p class="timeline-company">
+                    Savitribai Phule Pune University
+                  </p>
+                </div>
+
+                <div class="timeline-date">
+                  Jun 2020 — Jun 2024
+                </div>
+
+              </div>
+
+              <p class="timeline-description">
+                Graduated with an 8.66 CGPA. Built an AI attendance
+                system using Python and OpenCV as an academic project.
+              </p>
+
+              <div class="tags">
+                <span>Python</span>
+                <span>OpenCV</span>
+                <span>Algorithms</span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
 
       </div>
+
     </div>
 
   </div>

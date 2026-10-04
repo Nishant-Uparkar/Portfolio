@@ -2,9 +2,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 60px;
-  height: 50px;
+  padding: 15px 50px;
+  height: 45px;
   background-color: #1c3864;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .nav-links {
@@ -29,6 +32,8 @@
   border: 1px solid #ff4058;
   padding: 12px 28px;
   font-size: 17px !important;
+  border-radius: 5px;
+  color: #ff4058 !important;
 }
 
 .talk-btn:hover {

@@ -1,22 +1,210 @@
 <section id="contact">
-  <div class="container">
-    <h2>Contact Me</h2>
-    <p>If you would like to get in touch, please fill out the form below:</p>
-    <form>
-      <div class="form-group">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-      </div>
-      <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-      <div class="form-group">
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-      </div>
-      <button type="submit">Submit</button>
-    </form>
-  </div>
-</section>
 
+  <div class="contact-container">
+
+    <!-- LEFT SIDE -->
+    <div class="contact-info">
+
+      <p class="contact-label">GET IN TOUCH</p>
+
+      <h2>
+        Let's build something
+        <span>great together.</span>
+      </h2>
+
+      <p class="contact-description">
+        Have a project, opportunity, or just want to say hello?
+        Feel free to send me a message. I'll get back to you as soon
+        as possible.
+      </p>
+
+      <div class="contact-details">
+
+        <div class="contact-detail">
+          <div class="detail-icon">
+            ✉
+          </div>
+
+          <div>
+            <span>Email</span>
+              uparkarnishant4@gmail.com
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="detail-icon">
+            ↗
+          </div>
+
+          <div>
+            <span>Location</span>
+            <p>Mumbai, India</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- RIGHT SIDE -->
+    <div class="contact-card">
+
+      <div class="form-header">
+
+        <h3>Send me a message</h3>
+
+        <p>
+          Fill in the details below and I'll get back to you.
+        </p>
+
+      </div>
+
+
+      <form
+        #contactForm="ngForm"
+        (ngSubmit)="submitMessage(contactForm)"
+      >
+
+        <!-- NAME -->
+        <div class="form-group">
+
+          <label for="name">
+            Name
+          </label>
+
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your name"
+            [(ngModel)]="contactMsg.name"
+            #name="ngModel"
+            required
+            minlength="3"
+          >
+
+        </div>
+
+
+        <!-- EMAIL -->
+        <div class="form-group">
+
+          <label for="email">
+            Email
+          </label>
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="your@email.com"
+            [(ngModel)]="contactMsg.email"
+            #email="ngModel"
+            required
+            email
+          >
+
+        </div>
+
+
+        <!-- MESSAGE -->
+        <div class="form-group">
+
+          <label for="message">
+            Message
+          </label>
+
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Tell me about your project or opportunity..."
+            [(ngModel)]="contactMsg.message"
+            #message="ngModel"
+            rows="5"
+            required
+            minlength="10"
+          ></textarea>
+
+        </div>
+
+
+        <!-- SUBMIT BUTTON -->
+        <button
+          type="submit"
+          [disabled]="isSubmitting()"
+        >
+
+          @if (isSubmitting()) {
+
+            <span class="spinner"></span>
+            Sending...
+
+          } @else {
+
+            Send Message
+            <span class="button-arrow">→</span>
+
+          }
+
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <!-- SUCCESS TOAST -->
+  @if (successMessage()) {
+
+    <div class="toast toast-success">
+
+      <div class="toast-icon">
+        ✓
+      </div>
+
+      <div class="toast-content">
+
+        <strong>Message Sent</strong>
+
+        <span>
+          {{ successMessage() }}
+        </span>
+
+      </div>
+
+      <div class="toast-progress success-progress"></div>
+
+    </div>
+
+  }
+
+
+  <!-- ERROR TOAST -->
+  @if (errorMessage()) {
+
+    <div class="toast toast-error">
+
+      <div class="toast-icon">
+        !
+      </div>
+
+      <div class="toast-content">
+
+        <strong>Unable to send</strong>
+
+        <span>
+          {{ errorMessage() }}
+        </span>
+
+      </div>
+
+      <div class="toast-progress error-progress"></div>
+
+    </div>
+
+  }
+
+</section>

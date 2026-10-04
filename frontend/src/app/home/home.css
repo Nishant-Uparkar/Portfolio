@@ -16,6 +16,7 @@
 }
 
 
+
 /* =========================
    SOCIAL LINKS
 ========================= */
@@ -27,28 +28,39 @@
   flex-direction: column;
   align-items: center;
 
-  gap: 18px;
+  gap: 20px;
 
   z-index: 2;
 }
 
 .social-links a {
-  color: white;
+  width: 42px;
+  height: 42px;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
   text-decoration: none;
 
-  font-size: 13px;
-  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
 
   transition: all 0.3s ease;
+}
+
+.social-links a i {
+  font-size: 19px;
 }
 
 .social-links a:hover {
   color: #ff4058;
 
+  border-color: #ff4058;
+
   transform: translateY(-3px);
 }
-
 
 /* =========================
    HERO CONTENT
@@ -150,6 +162,13 @@
   color: white;
 
   border: 1px solid #ff4058;
+   display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  line-height: 1.2;
+  gap: 2px;
 }
 
 .resume-btn:hover {
