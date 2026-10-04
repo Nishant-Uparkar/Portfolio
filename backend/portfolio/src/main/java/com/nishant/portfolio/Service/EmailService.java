@@ -1,36 +1,47 @@
 package com.nishant.portfolio.Service;
 
-import org.springframework.mail.SimpleMailMessage;
-import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import com.nishant.portfolio.Entity.ContactMsg;
+import com.resend.Resend;
+import com.resend.services.emails.model.CreateEmailOptions;
 
-import lombok.RequiredArgsConstructor;
-
-@Service 
-@RequiredArgsConstructor 
+@Service
 public class EmailService {
 
-    private final JavaMailSender mailSender;
+    private final Resend resend;
+
+    public EmailService(@Value("${RESEND_API_KEY}") String apiKey) {
+        this.resend = new Resend(apiKey);
+    }
 
     public void sendContactNotification(ContactMsg contactMsg) {
 
-        SimpleMailMessage mail = new SimpleMailMessage();
+        try {
+            CreateEmailOptions email = CreateEmailOptions.builder()
+                    .from("Portfolio <onboarding@resend.dev>")
+                    .to("uparkar.nishant20022@gmail.com")
+                    .subject("New Contact Message - Portfolio")
+                    .html("""
+                            <h2>New Contact Message</h2>
 
-        mail.setTo("uparkarnishant4@gmail.com");
+                            <p><strong>Name:</strong> %s</p>
+                            <p><strong>Email:</strong> %s</p>
 
-        mail.setSubject("New Contact Message - Portfolio");
+                            <p><strong>Message:</strong></p>
+                            <p>%s</p>
+                            """.formatted(
+                                    contactMsg.getName(),
+                                    contactMsg.getEmail(),
+                                    contactMsg.getMessage()
+                            ))
+                    .build();
 
-        mail.setText(
-                "You received a new message from your portfolio website.\n\n"
-                + "Name: " + contactMsg.getName() + "\n"
-                + "Email: " + contactMsg.getEmail() + "\n\n"
-                + "Message:\n"
-                + contactMsg.getMessage()
-        );
+            resend.emails().send(email);
 
-        mailSender.send(mail);
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to send email notification", e);
+        }
     }
-    
 }
