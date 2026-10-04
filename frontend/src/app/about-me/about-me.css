@@ -61,6 +61,7 @@
 }
 
 .about-inner {
+  width: 100%;
   max-width: 1050px;
   margin: 0 auto;
 
@@ -206,6 +207,9 @@
 ========================================= */
 
 .code-card {
+  width: 100%;
+  min-width: 0;
+
   background: var(--surface-deep);
 
   border: 1px solid var(--border);
@@ -692,7 +696,6 @@
 /* =========================================
    RESPONSIVE
 ========================================= */
-
 @media (max-width: 900px) {
 
   .about {
@@ -702,16 +705,16 @@
 
   .about-hero {
     grid-template-columns: 1fr;
-
     gap: 40px;
   }
 
   .code-card {
+    width: 100%;
     max-width: 600px;
 
-    width: 100%;
-
     transform: rotate(0);
+
+    margin: 0 auto;
   }
 
   .do-grid {
@@ -724,20 +727,19 @@
 @media (max-width: 700px) {
 
   .about {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 55px 20px;
   }
-
-
-  /* Hero */
 
   .about-title {
-    font-size: 34px;
+    font-size: 32px;
   }
-
 
   .about-lead {
     font-size: 16px;
+  }
+
+  .about-description {
+    font-size: 14px;
   }
 
 
@@ -753,12 +755,11 @@
 
   .proof-item + .proof-item {
     border-left: none;
-
     border-top: 1px solid var(--border);
   }
 
 
-  /* Cards */
+  /* Expertise */
 
   .do-grid {
     grid-template-columns: 1fr;
@@ -772,7 +773,7 @@
   /* Timeline */
 
   .timeline {
-    padding: 28px 22px 30px 45px;
+    padding: 28px 20px 30px 45px;
   }
 
   .timeline::before {
@@ -785,7 +786,6 @@
 
   .timeline-header {
     flex-direction: column;
-
     gap: 6px;
   }
 
@@ -795,6 +795,56 @@
 
 }
 
+@media (max-width: 480px) {
+
+  .about {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .about-title {
+    font-size: 29px;
+  }
+
+  .about-lead {
+    font-size: 15px;
+  }
+
+  .about-cta {
+    padding: 11px 20px;
+    font-size: 14px;
+  }
+
+  .code-card pre {
+    padding: 18px;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+  }
+
+  .proof-item {
+    padding: 17px;
+  }
+
+  .proof-item strong {
+    font-size: 20px;
+  }
+
+  .do-card {
+    padding: 20px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .timeline {
+    padding-left: 40px;
+    padding-right: 15px;
+  }
+
+}
 
 /* =========================================
    REDUCED MOTION

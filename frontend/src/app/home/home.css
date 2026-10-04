@@ -262,20 +262,24 @@
 
 
 /* =========================
-   RESPONSIVE DESIGN
+   HOME RESPONSIVE
 ========================= */
 
-
-/* Tablets */
+/* Tablet */
 
 @media (max-width: 1000px) {
 
   .home {
-    padding: 40px 30px;
+    padding: 50px 30px;
+  }
+
+  .social-links {
+    width: 60px;
   }
 
   .hero-content {
-    padding-left: 30px;
+    width: 50%;
+    padding-left: 25px;
   }
 
   .hero-content h1 {
@@ -283,10 +287,11 @@
   }
 
   .hero-content h2 {
-    font-size: 25px;
+    font-size: 24px;
   }
 
   .hero-image {
+    width: 50%;
     height: 400px;
   }
 
@@ -306,9 +311,146 @@
 
     flex-direction: column;
 
-    padding: 60px 25px;
+    padding: 50px 20px 70px;
+
+    text-align: center;
   }
 
+
+  /* Social icons */
+
+  .social-links {
+    width: 100%;
+
+    flex-direction: row;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    margin-bottom: 35px;
+  }
+
+  .social-links a {
+    width: 44px;
+    height: 44px;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+  }
+
+  .social-links a i {
+    font-size: 19px;
+  }
+
+
+  /* Content */
+
+  .hero-content {
+    width: 100%;
+
+    padding-left: 0;
+
+    max-width: 650px;
+  }
+
+  .greeting {
+    font-size: 16px;
+
+    margin-bottom: 12px;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+
+    line-height: 1.2;
+  }
+
+  .hero-content h2 {
+    font-size: 21px;
+
+    line-height: 1.4;
+
+    margin-bottom: 30px;
+  }
+
+
+  /* Button */
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .btn {
+    padding: 13px 28px;
+
+    font-size: 14px;
+  }
+
+
+  /* Image */
+
+  .hero-image {
+    width: 100%;
+
+    height: auto;
+
+    min-height: 300px;
+
+    margin-top: 40px;
+  }
+
+  .image-background {
+    width: 75%;
+    height: 70%;
+  }
+
+  .hero-image img {
+    width: 75%;
+
+    max-width: 320px;
+  }
+
+}
+
+
+/* Small phones */
+
+@media (max-width: 480px) {
+
+  .home {
+    padding: 40px 16px 60px;
+  }
+
+  .social-links {
+    margin-bottom: 30px;
+  }
+
+  .social-links a {
+    width: 40px;
+    height: 40px;
+  }
+
+  .social-links a i {
+    font-size: 17px;
+  }
+
+  .hero-content h1 {
+    font-size: 31px;
+  }
+
+  .hero-content h2 {
+    font-size: 18px;
+  }
+
+  .hero-image {
+    min-height: 260px;
+  }
+
+  .hero-image img {
+    width: 85%;
+  }
+
+}
 
   /* Social links */
 
@@ -398,7 +540,7 @@
     width: 75%;
   }
 
-}
+
 
 
 /* Small Mobile */
